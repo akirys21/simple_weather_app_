@@ -48,10 +48,12 @@
             >
                 <div class="card-body">
                     <h3 class="card-title">{{ weather.city }}</h3>
+                    {% if weather.icon %}
                     <img
                         src="http://openweathermap.org/img/wn/{{ weather.icon }}@2x.png"
                         alt="weather icon"
                     />
+                    {% endif %}
                     <p class="card-text display-6">{{ weather.temperature }}°C</p>
                     <p class="text-light">{{ weather.description }}</p>
                 </div>
